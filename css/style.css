@@ -49,3 +49,9 @@ table {
 .page-content {
    text-align: center;
 }
+.cover-photo {
+    background: url('../img/double_t.jpg') center center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
