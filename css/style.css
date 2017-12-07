@@ -46,12 +46,24 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.page-content {
-   text-align: center;
+.landing-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/pool_alone.jpg') center center no-repeat;
+  background-size: contain;
+  height: 403px;
+  width: 604px;
 }
-.cover-photo {
-    background: url('../img/double_t.jpg') center center no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 100%;
+.landing-image:hover {
+    background-image: url("../img/pool_w_friends.jpg");
+}
+
+@media only screen and (max-width: 700px) {
+    .landing-image {
+        width: 95%;
+    }
 }
