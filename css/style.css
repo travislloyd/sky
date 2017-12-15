@@ -62,8 +62,96 @@ table {
     background-image: url("../img/pool_w_friends.jpg");
 }
 
+.ticker-wrap {
+    font-family: "Lucida Console", Monaco, monospace;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    margin: auto;
+}
+.top-ticker {
+    top: 0;
+}
+.middle-ticker {
+    bottom: 50%;
+    top: 50%;
+}
+.bottom-ticker {
+    bottom: 0;
+}
+.right-to-left {
+    padding-left: 100%; // offsets items to begin
+    .ticker {
+        padding-right: 100%; // taken from container as display inline-block
+    }
+}
+.left-to-right {
+    padding-right: 100%; // offsets items to begin
+    .ticker {
+        padding-left: 100%; // taken from container as display inline-block
+    }
+}
+.ticker {
+    display: inline-block;
+    height: 6rem;
+    line-height: 6rem;
+    white-space: nowrap;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.ticker__item {
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 4rem;
+}
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes reverseTicker {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+}
+.slow {
+    animation-duration: 60s; // tweak based on number of items/desired speed
+}
+.medium {
+    animation-duration: 40s; // tweak based on number of items/desired speed
+}
+.fast {
+    animation-duration: 25s; // tweak based on number of items/desired speed
+}
+.right-to-left .ticker {
+    animation-name: ticker;
+}
+.left-to-right .ticker {
+    animation-name: reverseTicker;
+}
+
 @media only screen and (max-width: 700px) {
     .landing-image {
         width: 95%;
+    }
+
+    .ticker__item {
+        display: inline-block;
+        padding: 0 1rem;
+        font-size: 2rem;
     }
 }
