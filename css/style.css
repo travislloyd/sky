@@ -82,15 +82,15 @@ table {
 }
 .right-to-left {
     padding-left: 100%; // offsets items to begin
-    .ticker {
-        padding-right: 100%; // taken from container as display inline-block
-    }
+}
+.right-to-left .ticker {
+    padding-right: 100%; // taken from container as display inline-block
 }
 .left-to-right {
     padding-right: 100%; // offsets items to begin
-    .ticker {
-        padding-left: 100%; // taken from container as display inline-block
-    }
+}
+.left-to-right .ticker {
+    padding-left: 100%; // taken from container as display inline-block
 }
 .ticker {
     display: inline-block;
