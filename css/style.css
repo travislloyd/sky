@@ -53,13 +53,13 @@ table {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url('../img/pool_alone.jpg') center center no-repeat;
+  background: url('../img/maine.jpg') center center no-repeat;
   background-size: contain;
   height: 403px;
   width: 604px;
 }
 .landing-image:hover {
-    background-image: url("../img/pool_w_friends.jpg");
+    background-image: url("../img/snow_smile.jpg");
 }
 
 .ticker-wrap {
@@ -147,7 +147,7 @@ table {
 @media only screen and (max-width: 700px) {
     .landing-image {
         width: 95%;
-        background-image: url("../img/pool_w_friends.jpg");
+        background-image: url("../img/snow_smile.jpg");
     }
 
     .ticker__item {
